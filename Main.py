@@ -44,7 +44,7 @@ async def start(thread_name, wait_time, meetingcode, passcode):
 
         try:
             query = '//button[text()="Join Audio by Computer"]'
-            await page.wait_for_selector(query, timeout=350000)
+            await page.wait_for_selector(query, timeout=370000)
             mic_button_locator = await page.query_selector(query)
             await mic_button_locator.click()
             print(f"{thread_name} mic aayenge.")
